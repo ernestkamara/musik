@@ -33,8 +33,12 @@ dependencies {
     implementation libraries.appCompat
     implementation libraries.dagger
     implementation libraries.daggerAndroid
+    implementation libraries.glide
+
     kapt libraries.daggerCompiler
     kapt libraries.daggerAndroidCompiler
+    kapt libraries.glideCompiler
+
 
     testImplementation testLibraries.junit4
 }

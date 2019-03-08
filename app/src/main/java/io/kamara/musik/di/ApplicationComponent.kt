@@ -10,6 +10,7 @@ import io.kamara.musik.topartists.di.TopArtistsModule
     modules =  [
         AndroidInjectionModule::class,
         ApplicationModule::class,
+        ActivityModule::class,
         TopArtistsModule::class
     ]
 )

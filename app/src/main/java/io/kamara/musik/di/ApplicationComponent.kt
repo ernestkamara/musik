@@ -5,9 +5,11 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import io.kamara.musik.MusikApplication
 import io.kamara.musik.topartists.di.TopArtistsModule
+import javax.inject.Singleton
 
+@Singleton
 @Component(
-    modules =  [
+    modules = [
         AndroidInjectionModule::class,
         ApplicationModule::class,
         ActivityModule::class,

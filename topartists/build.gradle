@@ -15,6 +15,9 @@ android {
         targetSdkVersion androidTargetSdkVersion
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', "LAST_FM_APIKEY", LAST_FM_APIKEY
+
     }
 
     buildTypes {
@@ -27,14 +30,23 @@ android {
 }
 
 dependencies {
+    implementation projectModules.core
+
     implementation libraries.kotlinStdLib
     implementation libraries.appCompat
     implementation libraries.ktxCore
     implementation libraries.constraintLayout
+    implementation libraries.archLifecycle
     implementation libraries.dagger
     implementation libraries.daggerAndroid
+    implementation libraries.retrofitMoshi
+    implementation libraries.glide
+
+    api  libraries.retrofit
+
     kapt libraries.daggerCompiler
     kapt libraries.daggerAndroidCompiler
+    kapt libraries.glideCompiler
 
     testImplementation testLibraries.junit4
 }

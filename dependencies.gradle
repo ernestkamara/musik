@@ -7,10 +7,13 @@ ext {
 
     jetpackVersion = '1.1.0-alpha01'
     constraintLayoutVersion = '2.0.0-alpha3'
+    archLifecycleVersion = "1.1.1"
     kotlinVersion = '1.3.11'
     ktxVersion = '1.1.0-alpha03'
     glideVersion = "4.8.0"
     okHttpVersion = "3.12.1"
+    retrofitVersion = "2.5.0"
+
 
     daggerVersion = '2.20'
 
@@ -24,6 +27,7 @@ ext {
     libraries = [
             kotlinStdLib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
             appCompat            : "androidx.appcompat:appcompat:$jetpackVersion",
+            archLifecycle        : "android.arch.lifecycle:extensions:$archLifecycleVersion",
             constraintLayout     : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
             ktxCore              : "androidx.core:core-ktx:$ktxVersion",
             dagger               : "com.google.dagger:dagger:$daggerVersion",
@@ -33,7 +37,9 @@ ext {
             okHttp               : "com.squareup.okhttp3:okhttp:$okHttpVersion",
             loggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
             glide                : "com.github.bumptech.glide:glide:$glideVersion",
-            glideCompiler        : "com.github.bumptech.glide:compiler:$glideVersion"
+            glideCompiler        : "com.github.bumptech.glide:compiler:$glideVersion",
+            retrofit             : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitMoshi        : "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
     ]
 
     testLibraries = [

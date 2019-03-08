@@ -5,6 +5,7 @@ import dagger.android.ContributesAndroidInjector
 import io.kamara.musik.MusikActivity
 
 @Module
+@Suppress("unused")
 abstract class ActivityModule {
 
     @ContributesAndroidInjector

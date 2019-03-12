@@ -5,7 +5,6 @@ import dagger.Provides
 import io.kamara.musik.core.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import javax.inject.Singleton
 
 @Module
 object CoreNetworkModule {
@@ -22,12 +21,10 @@ object CoreNetworkModule {
 
     @Provides
     @JvmStatic
-    internal fun providesOkHttpClientBuilder(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient.Builder =
+    internal fun providesOkHttpClientBuilder(loggingInterceptor: HttpLoggingInterceptor?): OkHttpClient.Builder =
         OkHttpClient.Builder().apply {
             loggingInterceptor?.also {
                 addInterceptor(it)
             }
         }
-
-
 }
